@@ -67,3 +67,15 @@ bool("")
 bool("Spam")
 bool("True")
 bool("False")
+
+g = 20
+g == 20
+g == 13
+g != 20
+g != 13
+g < 30
+g > 30
+g <= 20
+g >= 20
+
+
