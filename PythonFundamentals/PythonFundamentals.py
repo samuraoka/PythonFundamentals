@@ -78,4 +78,44 @@ g > 30
 g <= 20
 g >= 20
 
+if True:
+    print("It's true!")
+
+if False:
+    print("It's true!")
+
+if bool("eggs"):
+    print("Yes please")
+
+if "eggs":
+    print("Yes please")
+
+h = 42
+if h > 50:
+    print("Greater than 50")
+else:
+    print("50 or smaller")
+
+if h > 50:
+    print("Greater than 50")
+elif h < 20:
+    print("Less than 20")
+else:
+    print("Between 20 and 50")
+
+c = 5
+while c != 0:
+    print(c)
+    c -= 1
+else:
+    print("end of while loop")
+    print(c)
+
+while True:
+    print("Looping")
+
+while True:
+    response = input('--> ')
+    if int(response) % 7 == 0:
+        break
 
