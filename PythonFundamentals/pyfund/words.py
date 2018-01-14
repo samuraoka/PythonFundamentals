@@ -1,8 +1,11 @@
-from urllib.request import urlopen
+from pip._vendor.requests.packages import urllib3
 
-with urlopen('http://sixty-north.com/c/t.txt') as story:
+# urllib3 User Guide
+# https://urllib3.readthedocs.io/en/latest/user-guide.html
+http = urllib3.PoolManager()
+
+with http.request('GET', 'http://sixty-north.com/c/t.txt') as story:
+    print(story.status)
     story_words = []
-    for line in story:
-        line_words = line.decode('utf-8').split()
-        for word in line_words:
-            story_words.append(word)
+    for word in story.data.decode('utf-8').split():
+        story_words.append(word)
