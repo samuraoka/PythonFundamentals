@@ -9,3 +9,6 @@ with http.request('GET', 'http://sixty-north.com/c/t.txt') as story:
     story_words = []
     for word in story.data.decode('utf-8').split():
         story_words.append(word)
+
+for word in story_words:
+    print(word)
